@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIXELHUB - Download Game Indie Gratis</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI', Tahoma, sans-serif}
+  :root{
+    --bg:#0f0f1a;--card:#1a1a2e;--accent:#7f5af0;--text:#fffffe;--muted:#94a1b2
+  }
+  body{background:var(--bg);color:var(--text)}
+  header{
+    background:var(--card);padding:15px 5%;display:flex;justify-content:space-between;align-items:center;
+    border-bottom:2px solid var(--accent);position:sticky;top:0;z-index:10
+  }
+  .logo{font-size:24px;font-weight:900;color:var(--accent)}
+  .search input{
+    background:#2a2a40;border:1px solid var(--accent);color:var(--text);
+    padding:8px 15px;border-radius:20px;width:250px
+  }
+  .container{max-width:1200px;margin:30px auto;padding:0 20px}
+  .banner{
+    background:linear-gradient(135deg,#7f5af0,#2cb67d);padding:40px;border-radius:15px;margin-bottom:30px;
+    text-align:center
+  }
+  .banner h1{font-size:32px;margin-bottom:10px}
+  .filters{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+  .filter-btn{
+    background:var(--card);border:1px solid var(--muted);color:var(--muted);
+    padding:8px 15px;border-radius:20px;cursor:pointer
+  }
+  .filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+  .card{
+    background:var(--card);border-radius:12px;overflow:hidden;transition:transform 0.2s;
+    border:1px solid #2a2a40
+  }
+  .card:hover{transform:translateY(-5px);border-color:var(--accent)}
+  .card-img{
+    width:100%;height:160px;background:linear-gradient(45deg,#7f5af0,#2cb67d);
+    display:flex;align-items:center;justify-content:center;font-size:48px
+  }
+  .card-body{padding:15px}
+  .card-title{font-size:18px;font-weight:700;margin-bottom:5px}
+  .tags{display:flex;gap:5px;margin:8px 0;flex-wrap:wrap}
+  .tag{background:#2a2a40;color:var(--muted);padding:3px 8px;border-radius:5px;font-size:12px}
+  .meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin:10px 0}
+  .download-btn{
+    width:100%;background:var(--accent);color:#fff;border:none;padding:10px;
+    border-radius:8px;font-weight:700;cursor:pointer;font-size:14px
+  }
+  .download-btn:hover{background:#6a4ae0}
+  footer{text-align:center;padding:30px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">◆ PIXELHUB</div>
+  <div class="search">
+    <input type="text" id="searchBar" placeholder="Cari game...">
+  </div>
+</header>
+
+<div class="container">
+  <div class="banner">
+    <h1>Ruang games</h1>
+    <p>Download gratis. Support developer. Main sepuasnya.</p>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterCat('all')">Semua</button>
+    <button class="filter-btn" onclick="filterCat('action')">Action</button>
+    <button class="filter-btn" onclick="filterCat('rpg')">RPG</button>
+    <button class="filter-btn" onclick="filterCat('horror')">Horror</button>
+    <button class="filter-btn" onclick="filterCat('pixel')">Pixel</button>
+  </div>
+
+  <div class="grid" id="gameGrid">
+
+    <!-- GAME CARD 1 -->
+    <div class="card" data-cat="action pixel">
+      <div class="card-img">⚔️</div>
+      <div class="card-body">
+        <div class="card-title">Cyber Runner 2077</div>
+        <div class="tags">
+          <span class="tag">Action</span><span class="tag">Pixel</span><span class="tag">2D</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted)">Lari, tembak, dan selamat dari kota cyberpunk.</p>
+        <div class="meta">
+          <span>⭐ 4.8</span><span>166MB</span><span>AWAL</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1Hj80inBJx--H70zgdaBefTPwiqeyc4aN/view?usp=sharing"><button class="download-btn">DOWNLOAD</button></a>
+      </div>
+    </div>
+
+    <!-- GAME CARD 2 -->
+    <div class="card" data-cat="rpg">
+      <div class="card-img">🛡️</div>
+      <div class="card-body">
+        <div class="card-title">Echoes of Mythic</div>
+        <div class="tags">
+          <span class="tag">RPG</span><span class="tag">Fantasy</span><span class="tag">TCG</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted)">Kumpulkan kartu dan kalahkan kegelapan.</p>
+        <div class="meta">
+          <span>⭐ 4.9</span><span>120MB</span><span>v0.9.5</span>
+        </div>
+        <a href="link disini"><button class="download-btn">DOWNLOAD</button></a>
+      </div>
+    </div>
+
+    <!-- GAME CARD 3 -->
+    <div class="card" data-cat="horror pixel">
+      <div class="card-img">👻</div>
+      <div class="card-body">
+        <div class="card-title">Backrooms: Level 0</div>
+        <div class="tags">
+          <span class="tag">Horror</span><span class="tag">Pixel</span><span class="tag">Survival</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted)">Jangan buat suara. Mereka mendengar.</p>
+        <div class="meta">
+          <span>⭐ 4.6</span><span>80MB</span><span>v1.0.1</span>
+        </div>
+        <a href="link disini"><button class="download-btn">DOWNLOAD</button></a>
+      </div>
+    </div>
+
+    <!-- GAME CARD 4 -->
+    <div class="card" data-cat="action">
+      <div class="card-img">🚀</div>
+      <div class="card-body">
+        <div class="card-title">Star Commander</div>
+        <div class="tags">
+          <span class="tag">Action</span><span class="tag">Space</span><span class="tag">Shooter</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted)">Pimpin armada dan kuasai galaksi.</p>
+        <div class="meta">
+          <span>⭐ 4.7</span><span>300MB</span><span>v2.1.0</span>
+        </div>
+        <a href="link disini"><button class="download-btn">DOWNLOAD</button></a>
+      </div>
+    </div>
+
+    <!-- GAME CARD 5 -->
+    <div class="card" data-cat="rpg pixel">
+      <div class="card-img">🐉</div>
+      <div class="card-body">
+        <div class="card-title">Pixel Quest Legends</div>
+        <div class="tags">
+          <span class="tag">RPG</span><span class="tag">Pixel</span><span class="tag">Adventure</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted)">Petualangan 16-bit ala SNES.</p>
+        <div class="meta">
+          <span>⭐ 4.5</span><span>150MB</span><span>v1.3.2</span>
+        </div>
+        <a href="link disini"><button class="download-btn">DOWNLOAD</button></a>
+      </div>
+    </div>
+
+    <!-- GAME CARD 6 -->
+    <div class="card" data-cat="action">
+      <div class="card-img">🥷</div>
+      <div class="card-body">
+        <div class="card-title">Shadow Ops</div>
+        <div class="tags">
+          <span class="tag">Action</span><span class="tag">Stealth</span><span class="tag">Military</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted)">Misi penyusupan paling berbahaya.</p>
+        <div class="meta">
+          <span>⭐ 4.4</span><span>500MB</span><span>v0.8.0</span>
+        </div>
+        <a href="link disini"><button class="download-btn">DOWNLOAD</button></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 PIXELHUB. Dibuat untuk developer indie. <br>
+  Ganti "link disini" dengan link Google Drive / Itch.io / GameJolt kamu
+</footer>
+
+<script>
+// Filter kategori
+function filterCat(cat){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  document.querySelectorAll('.card').forEach(card=>{
+    if(cat==='all' || card.dataset.cat.includes(cat)){
+      card.style.display='block';
+    } else {
+      card.style.display='none';
+    }
+  });
+}
+
+// Search
+document.getElementById('searchBar').addEventListener('input', e=>{
+  const q = e.target.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(card=>{
+    const title = card.querySelector('.card-title').textContent.toLowerCase();
+    card.style.display = title.includes(q) ? 'block' : 'none';
+  });
+});
+</script>
+</body>
+</html>
